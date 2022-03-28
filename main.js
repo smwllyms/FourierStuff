@@ -5,7 +5,7 @@ function importModule (dir) {
     document.head.appendChild(mod);
 }
 
-importModule("/calc.js")
+importModule("./calc.js")
 
 //Macros
 const maxRows = 512;
