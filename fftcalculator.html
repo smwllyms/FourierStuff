@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script src="/main.js" type="text/javascript"></script>
+        <link href="/main.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="header">
+            <a href="fftcalculator.html">FFT Calculator</a>
+            <a href="fourieranalysis.html">Live Fourier Analysis</a>
+        </div>
+        <section><table id="sampleTable">
+            <tbody>
+                <tr>
+                    <th style="width:20px">Sample #</th>
+                    <th>Sample Value</th>
+                </tr>
+            </tbody>
+        </table>
+        <div class="TableEdit" onclick="addRow(sampleTable)">Add Row +</div>
+        <div class="TableEdit" onclick="deleteRow(sampleTable)">Remove Row -</div>
+        <div class="TableEdit">Custom #: <input oninput="setRowNum(sampleTable, this.value)" type="text"/></div>
+        <div class="TableEdit" onclick="fillRandom(sampleTable)">Fill w/ Random</div>
+        <div class="TableEdit" onclick="loadD1(sampleTable)">Load Example (small)</div>
+        <div class="TableEdit" onclick="loadD2(sampleTable)">Load Example (large)</div>
+        <div class="TableEdit" onclick="userFunc('dft', sampleTable)">DFT</div>
+        <div class="TableEdit" onclick="userFunc('fft', sampleTable)">FFT</div>
+        </section>
+        <section><table id="resultsTable">
+            <tbody>
+                <tr>
+                    <th>Sample #</th>
+                    <th>Real Component</th>
+                    <th>Imaginary Component</th>
+                    <th>Magnitude</th>
+                </tr>
+            </tbody>
+        </table>
+        <div class="TableEdit" onclick="userFunc('idft', resultsTable)">IDFT</div>
+        <div class="TableEdit" onclick="userFunc('ifft', resultsTable)">IFFT</div>
+        </section>
+    </body>
+</html>

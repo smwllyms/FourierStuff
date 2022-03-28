@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link href="/main.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="header">
+            <a href="fftcalculator.html">FFT Calculator</a>
+            <a href="fourieranalysis.html">Live Fourier Analysis</a>
+        </div>
+        <div id="frame">
+            <div id="controls" class="menubox">
+                <h2>Fourier Analysis</h2>
+                <form action="" class="menubox" style="width:60%;justify-content: space-between!important;">
+                    <input type="radio" name="mode" value=1>Sine Oscillator</input>
+                    <input type="radio" name="mode" value=2>Sawtooth Oscillator</input>
+                    <input type="radio" name="mode" value=3>Microphone Input</input>
+                    <a id="start">Start</a>
+                </form>
+                
+                <div class="menubox" style="width:90%;flex-direction:column;">
+                    <p>Oscillator Pitch = <span id="actualOscPitch">C5 (256 Hz)</span></p>
+                    <input type="range" id="freqSlider" style="width:80%"></input>
+                </div>
+            </div>
+            <div id="displayBars">
+
+            </div>
+            <div id="detectedPitch">
+
+            </div>
+        </div>
+    </body>
+</html>
+
+<script src="/main2.js" type="text/javascript"></script>
