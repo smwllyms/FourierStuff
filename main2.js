@@ -144,7 +144,7 @@ form.onsubmit = async function(e) {
     let streamSrc;
 
     if (mode == 3) {
-        await navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+        await navigator.mediaDevices.getUserMedia({ audio: {autoGainControl:false,echoCancellation:false,noiseSuppression:false}, video: false })
         .then(stream=>streamSrc = audioContext.createMediaStreamSource(stream));
     }
     else {
